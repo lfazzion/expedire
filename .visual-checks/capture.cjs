@@ -1,0 +1,2 @@
+const {chromium}=require('playwright');
+(async()=>{const b=await chromium.launch({executablePath:'/home/hermes/.cache/ms-playwright/chromium-1228/chrome-linux/chrome',args:['--no-sandbox']});for(const [w,h] of [[1440,900],[1280,800],[390,2400]]){const p=await b.newPage({viewport:{width:w,height:h}});await p.goto('http://localhost:4321/index.html',{waitUntil:'networkidle'});await p.waitForTimeout(6500);await p.screenshot({path:`.visual-checks/${process.argv[2]||'before'}-${w}.png`});console.log(w,await p.locator('.hero').boundingBox());await p.close()}await b.close()})();
