@@ -12,5 +12,5 @@ Estúdio de automação com IA. Expedire significa expedir, fazer andar, resolve
 Primeiro produto: atendimento reativo pelo WhatsApp oficial, com n8n e integrações. Respostas e agendamento conforme escopo e sistemas conectados. Não publicar preços, métricas ou depoimentos inventados.
 ## Brand Commitments
 Marca séria, erudita, confiável e moderna. Paleta solicitada: kinpaku gold, verdigris patina, lacquer black e champagne.
-## Open Decisions
-Canal oficial de contato solicitado ao usuário; não presumir endereço de e-mail ou telefone.
+## Contatos oficiais
+E-mail: contato@expedire.com.br. X: https://x.com/getexpedire. Confirmados pelo proprietário. Não foi informado telefone comercial; não presumir número de WhatsApp.
