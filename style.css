@@ -19,12 +19,19 @@
 @font-face {
   font-family: "DM Sans";
   src: url("assets/fonts/dm-sans-500.ttf") format("truetype");
-  font-weight: 500 700;
+  font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: Fraunces;
   src: url("assets/fonts/fraunces-variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: Fraunces;
+  src: url("assets/fonts/fraunces-italic-variable.ttf") format("truetype");
+  font-style: italic;
   font-weight: 100 900;
   font-display: swap;
 }
@@ -100,8 +107,14 @@ button {
 }
 svg {
   width: 24px;
-  height: 24px;
+  height: auto;
+  aspect-ratio: 1;
   flex-shrink: 0;
+}
+.ui-icon {
+  display: block;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 img {
   display: block;
@@ -134,15 +147,20 @@ h2 {
   font-size: clamp(40px, 4.4vw, 68px);
 }
 h3 {
+  font-family: "DM Sans", sans-serif;
   font-size: 26px;
-  letter-spacing: -0.025em;
-  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
 }
 em {
   font-family: Fraunces, serif;
   font-weight: 350;
   font-style: italic;
-  letter-spacing: -0.045em;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+  letter-spacing: -0.025em;
   color: var(--gold);
 }
 p {
@@ -264,7 +282,7 @@ textarea:focus-visible {
   position: relative;
   isolation: isolate;
   min-height: 58px;
-  padding: 16px 24px;
+  padding: 16px 28px;
   background: var(--gold);
   color: var(--ink);
   border: 1px solid var(--gold);
@@ -384,7 +402,7 @@ textarea:focus-visible {
 .landing-hero h1 {
   font-size: clamp(72px, 7.65vw, 122px);
   line-height: 1.02;
-  letter-spacing: -0.058em;
+  letter-spacing: -0.045em;
   text-wrap: initial;
 }
 .title-line {
@@ -392,7 +410,7 @@ textarea:focus-visible {
 }
 .title-line em {
   font-size: 1.035em;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.035em;
 }
 .hero-bottom-copy {
   margin-top: 43px;
@@ -433,7 +451,8 @@ textarea:focus-visible {
   place-items: center;
 }
 .scroll-arrow svg {
-  width: 17px;
+  width: 18px;
+  height: 18px;
   transform: rotate(90deg);
 }
 .hero-conversation {
@@ -671,14 +690,16 @@ textarea:focus-visible {
   grid-row: 1/3;
 }
 .service-top svg {
-  width: 31px;
-  height: 31px;
+  width: 34px;
+  height: 34px;
 }
 .service h3 {
   font-size: 28px;
   margin-bottom: 20px;
 }
 .about .service h3 {
+  font-family: Manrope, sans-serif;
+  font-weight: 400;
   grid-row: 1/3;
   font-size: clamp(26px, 2.5vw, 39px);
   margin: 0;
@@ -754,8 +775,9 @@ textarea:focus-visible {
   align-items: flex-start;
 }
 .check-list svg {
-  width: 17px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
   color: var(--patina);
 }
 .product-copy .product-small {
@@ -1057,6 +1079,8 @@ textarea:focus-visible {
   margin-top: 52px;
 }
 .principle-grid svg {
+  width: 28px;
+  height: 28px;
   color: var(--patina);
   margin-bottom: 21px;
 }
@@ -1862,7 +1886,7 @@ textarea:focus {
     font-size: 47px;
   }
   .product-hero .button {
-    padding: 13px 18px;
+    padding: 14px 22px;
     font-size: 12px;
     gap: 16px;
   }
@@ -2162,6 +2186,11 @@ textarea:focus {
   .contact-panel {
     padding: 25px;
   }
+  .contact-panel input,
+  .contact-panel select,
+  .contact-panel textarea {
+    font-size: 16px;
+  }
   .contact-panel h3 {
     font-size: 24px;
   }
@@ -2316,7 +2345,8 @@ textarea:focus {
   flex: 1;
 }
 .appointment .message-content > svg {
-  width: 20px;
+  width: 24px;
+  height: 24px;
 }
 .float-result .message-content > svg {
   width: 29px;
@@ -2410,7 +2440,8 @@ textarea:focus {
   }
 }
 .offer-page .section > h2:not(#contato-titulo) {
-  font-family: Manrope;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
   font-size: 28px;
   letter-spacing: -0.025em;
   color: var(--gold);
@@ -2418,6 +2449,7 @@ textarea:focus {
 }
 
 .conversation-paths {
+  aspect-ratio: auto;
   position: absolute;
   inset: 0;
   width: 100%;

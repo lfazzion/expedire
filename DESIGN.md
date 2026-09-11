@@ -7,9 +7,12 @@ Identidade editorial expressiva para um estúdio brasileiro de automação com I
 - Preto laca `#101815`, fundo profundo `#0a100d`.
 - Ouro champagne `#d5bc7f`, pátina `#9ec3b2`, papel `#eeeae1`.
 - Área do produto `#203b30`; texto escuro em superfícies claras.
-- Manrope para títulos/assinatura, DM Sans para leitura, Fraunces para ênfase. Fontes locais.
+- Manrope para títulos principais/assinatura, DM Sans para leitura e subtítulos de interface, Fraunces com itálico real para ênfase. Fontes locais; pesos declarados correspondem aos arquivos.
 - Layout de até 1392px, margens fluidas, menu móvel até 800px. Hero com composição própria no celular; conteúdo testado a partir de 320px.
 - Logo e escultura do PR #1 preservados, incluindo masters e documentação em docs/BRAND-ASSETS.md.
+
+## Ícones e acabamento
+SVGs lineares com traço de 1,6, pontas arredondadas e margem interna no viewBox. Dimensões quadradas, alinhamento óptico e espaço de segurança nos botões também em hover. Títulos menores usam espaçamento de letras mais aberto.
 
 ## Movimento
 `motion.js` usa Web Animations API e IntersectionObserver, sem biblioteca de runtime. Balões entram em sequência, mostram digitação e conduzem à confirmação. Traços conectam as etapas. A abertura tem flutuação finita, recorte tipográfico e paralaxe discreta da arte em dispositivos com ponteiro preciso. O método acompanha o progresso de leitura; a assinatura final aparece por recorte.
