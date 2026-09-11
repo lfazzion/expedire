@@ -1,1 +1,8 @@
-{"version":1,"name":"Expedire","source":"style.css","tokens":{"colors":{"gold":"oklch(84% 0.19 80.46)","patina":"oklch(70% 0.12 188)","background":"#11130f","text":"#eeeade","muted":"#acae9f"},"fonts":{"display":"Manrope","body":"DM Sans"}},"extensions":{"breakpoints":{"mobile":"700px","tablet":"1000px"},"motion":{"flow":"16s linear infinite","reducedMotion":"disable animation and smooth scrolling"},"focus":{"outline":"2px solid gold","offset":"6px"}}}
+{
+  "name": "Expedire",
+  "palette": {"ink":"#101815","deep":"#0b120f","gold":"#d5bc7f","patina":"#8cbbab","paper":"#eeeae1","text":"#efeee7","muted":"#adb9b0"},
+  "typography": {"display":"Manrope","body":"DM Sans","accent":"Fraunces"},
+  "layout": {"maxWidth":"1280px","mobileBreakpoint":"720px"},
+  "brandAssets": "assets/brand/",
+  "documentation": "DESIGN.md"
+}

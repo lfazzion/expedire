@@ -1,57 +1,26 @@
----
-name: Expedire
-description: Tecnologia aplicada, com precisão editorial e fluxos visíveis.
-colors:
-  gold: "oklch(84% 0.19 80.46)"
-  patina: "oklch(70% 0.12 188)"
-  lacquer-black: "oklch(7% 0.006 95)"
-  surface: "#11130f"
-  raised: "#1a1e18"
-  champagne: "#eeeade"
-  muted: "#acae9f"
-  line: "#34392f"
-  product-surface: "#dcdccd"
-typography:
-  display:
-    fontFamily: "Manrope, sans-serif"
-    fontSize: "clamp(44px, 5.5vw, 78px)"
-    fontWeight: 400
-    lineHeight: 1.08
-    letterSpacing: "-0.04em"
-  body:
-    fontFamily: "DM Sans, sans-serif"
-    fontSize: "17px"
-    fontWeight: 400
-    lineHeight: 1.65
-rounded:
-  control: "3px"
-  conversation: "7px"
-spacing:
-  small: "12px"
-  medium: "24px"
-  large: "40px"
-components:
-  button-primary:
-    backgroundColor: "{colors.gold}"
-    textColor: "{colors.lacquer-black}"
-    rounded: "{rounded.control}"
-    padding: "15px 23px"
----
-## Overview
-Identidade editorial técnica. O símbolo combina linhas de processo e uma seta de avanço. Diagramas explicam o trabalho; a tipografia sustenta a marca.
-## Colors
-Ouro para ações principais; pátina para processos e conexões; champagne para leitura. A superfície clara destaca o produto dentro da marca.
-## Typography
-Manrope nos títulos e marca; DM Sans na leitura e controles. Fontes servidas localmente. Hierarquia com escala e espaço; textos secundários HTML a partir de 12px.
-## Layout
-Conteúdo limitado a 1240px. Duas colunas para narrativa e demonstração. Abaixo de 700px, uma coluna e menu expansível. Margens de 20px em telas pequenas; seções de 66px no mobile e 108px no desktop.
-## Elevation & Depth
-Superfícies opacas e divisórias finas. Sombra suave restrita à demonstração de conversa.
-## Shapes
-Controles discretamente arredondados; balões de conversa com direções distintas. SVG próprio para fluxos e ícones lineares.
-## Components
-Menu com estado expandido e Escape. FAQ com details nativo. Formulário local com validação e aviso explícito de não envio. Links de contato ativados apenas com destinatário configurado.
-## Do's and Don'ts
-**Regra do movimento:** mostrar origem, processamento e destino quando um diagrama for útil.
-**Regra da evidência:** não fabricar métricas, clientes, depoimentos ou resultados.
-Respeitar redução de movimento. Foco visível em ouro. Sem gradientes decorativos ou bibliotecas de interface.
+# Expedire — precisão em movimento
+
+## Direção visual
+Identidade editorial expressiva para um estúdio brasileiro de automação com IA. A abertura une uma composição tipográfica monumental, a escultura original em ouro/pátina e uma conversa flutuante. A relação solicitação → resposta → ação é o gesto de movimento central. Superfícies champagne e verde profundo dão ritmo à leitura; os serviços são linhas editoriais, sem uma grade de cartões repetidos.
+
+## Sistema
+- Preto laca `#101815`, fundo profundo `#0a100d`.
+- Ouro champagne `#d5bc7f`, pátina `#9ec3b2`, papel `#eeeae1`.
+- Área do produto `#203b30`; texto escuro em superfícies claras.
+- Manrope para títulos principais/assinatura, DM Sans para leitura e subtítulos de interface, Fraunces com itálico real para ênfase. Fontes locais; pesos declarados correspondem aos arquivos.
+- Layout de até 1392px, margens fluidas, menu móvel até 800px. Hero com composição própria no celular; conteúdo testado a partir de 320px.
+- Logo e escultura do PR #1 preservados, incluindo masters e documentação em docs/BRAND-ASSETS.md.
+
+## Ícones e acabamento
+SVGs lineares com traço de 1,6, pontas arredondadas e margem interna no viewBox. Dimensões quadradas, alinhamento óptico e espaço de segurança nos botões também em hover. Títulos menores usam espaçamento de letras mais aberto.
+
+## Movimento
+`motion.js` usa Web Animations API e IntersectionObserver, sem biblioteca de runtime. Balões entram em sequência, mostram digitação e conduzem à confirmação. Traços conectam as etapas. A abertura tem flutuação finita, recorte tipográfico e paralaxe discreta da arte em dispositivos com ponteiro preciso. O método acompanha o progresso de leitura; a assinatura final aparece por recorte.
+
+Pausa global e repetição por conversa. Animações ficam suspensas fora da tela ou com a aba oculta. `prefers-reduced-motion` mostra o conteúdo completo, estático. Sem JavaScript, os textos, conversas e contatos continuam disponíveis. A rolagem é nativa.
+
+## Páginas e conteúdo
+Inicial, WhatsApp e oferta compartilham identidade. A oferta incorporada do commit 0659f1d conserva integralmente o texto comercial aprovado; somente marcação semântica, recursos e caminhos foram ajustados. Não foram criados clientes, métricas, depoimentos ou preços.
+
+## Contato
+Canais oficiais em contact-config.js: contato@expedire.com.br e https://x.com/getexpedire. Nenhum telefone comercial presumido. O formulário prepara uma mensagem no aplicativo do visitante; o download local do briefing é alternativo. Não há envio automático ou armazenamento remoto.
