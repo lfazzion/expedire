@@ -25,7 +25,7 @@
     document.addEventListener('click', event => {
       if (!event.target.closest('.site-header')) closeMenu();
     });
-    matchMedia('(min-width: 721px)').addEventListener('change', closeMenu);
+    matchMedia('(min-width: 801px)').addEventListener('change', closeMenu);
   }
 
   // Contact actions open the visitor's own email/WhatsApp composer; no backend submission.

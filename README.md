@@ -29,6 +29,8 @@ Nome e empresa são opcionais. O texto do projeto é obrigatório. Sem JavaScrip
 - `whatsapp.html`: produto, demonstração ilustrativa, benefícios, públicos, método, FAQ e contato.
 - `style.css`: identidade compartilhada, layout responsivo, foco e redução de movimento.
 - `script.js`: menu, canais de contato, preparação de e-mail e download do briefing.
+- `motion.js`: conversas animadas, digitação, pausa/replay, entradas e progresso do método.
+- `oferta/index.html`: oferta comercial aprovada; recursos e links resolvidos a partir da subpasta.
 - `contact-config.js`: e-mail e X oficiais; WhatsApp opcional.
 - `assets/brand/`: logo e arte principal gerados com a ferramenta integrada de imagens.
 - `assets/fonts/`: fontes locais e licenças.
@@ -42,6 +44,16 @@ Nome e empresa são opcionais. O texto do projeto é obrigatório. Sem JavaScrip
 
 Esta revisão não altera DNS, configuração de hospedagem ou a versão publicada automaticamente. Revise e integre a branch conforme o fluxo de publicação do projeto.
 
-## Verificação desta revisão
+## Verificação
 
-Verificação estática de páginas, links, âncoras, imagens/fontes locais, rótulos, títulos e metadados; conferência de delimitadores do CSS; validação de sintaxe de JavaScript e verificação de espaços no diff. A interface ainda requer revisão visual no navegador do ambiente de publicação. Não houve teste em navegador nesta sessão.
+Servidor local: `python3 -m http.server 8000`.
+
+Teste de comportamento das animações, com Playwright disponível:
+
+```sh
+node tests/motion.cjs
+```
+
+Se o módulo estiver fora do projeto, informe seu caminho em `PLAYWRIGHT_MODULE`. O teste cobre pausa global, movimento reduzido, ordem das mensagens e repetição. Nenhuma dependência foi adicionada ao site.
+
+Revisão no Chromium das três páginas em 1440, 768, 390 e 320px. Conferir: erros de recursos/JavaScript, overflow, menu/Escape, contato direto e download, links/âncoras e fallback sem JavaScript. A oferta mantém o texto aprovado do commit 0659f1d.

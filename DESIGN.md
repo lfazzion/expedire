@@ -1,26 +1,23 @@
-# Expedire — identidade e interface
+# Expedire — precisão em movimento
 
-## Direção
-Marca forte e sóbria para um estúdio de automação com IA. Um monograma E em movimento e uma escultura em ouro/pátina dão à marca uma presença própria. Composição editorial, títulos amplos e áreas de respiro; sem métricas, clientes ou depoimentos fictícios.
+## Direção visual
+Identidade editorial expressiva para um estúdio brasileiro de automação com IA. A abertura une uma composição tipográfica monumental, a escultura original em ouro/pátina e uma conversa flutuante. A relação solicitação → resposta → ação é o gesto de movimento central. Superfícies champagne e verde profundo dão ritmo à leitura; os serviços são linhas editoriais, sem uma grade de cartões repetidos.
 
-## Sistema visual
-- Preto laca: `#101815`; fundo profundo: `#0b120f`.
-- Ouro champagne: `#d5bc7f`, para marca, ações e destaques.
-- Pátina: `#8cbbab`, para contexto e ícones.
-- Papel: `#eeeae1`, para a apresentação do produto e o painel de contato.
-- Manrope nos títulos e na assinatura; DM Sans para leitura e controles; Fraunces nos destaques editoriais.
-- Fontes locais, sem chamadas externas. Texto principal de 16px ou mais.
-- Controles com 4px de raio; painéis com 6–14px. Bordas sutis e sombras restritas aos elementos em primeiro plano.
+## Sistema
+- Preto laca `#101815`, fundo profundo `#0a100d`.
+- Ouro champagne `#d5bc7f`, pátina `#9ec3b2`, papel `#eeeae1`.
+- Área do produto `#203b30`; texto escuro em superfícies claras.
+- Manrope para títulos/assinatura, DM Sans para leitura, Fraunces para ênfase. Fontes locais.
+- Layout de até 1392px, margens fluidas, menu móvel até 800px. Hero com composição própria no celular; conteúdo testado a partir de 320px.
+- Logo e escultura do PR #1 preservados, incluindo masters e documentação em docs/BRAND-ASSETS.md.
 
-## Composição
-A página inicial abre com a proposta e a escultura da marca. Segue com estúdio/soluções, produto, método, princípios, dúvidas e contato. A página WhatsApp prioriza a demonstração ilustrativa, benefícios, públicos, método, FAQ e contato.
+## Movimento
+`motion.js` usa Web Animations API e IntersectionObserver, sem biblioteca de runtime. Balões entram em sequência, mostram digitação e conduzem à confirmação. Traços conectam as etapas. A abertura tem flutuação finita, recorte tipográfico e paralaxe discreta da arte em dispositivos com ponteiro preciso. O método acompanha o progresso de leitura; a assinatura final aparece por recorte.
 
-## Interação e acessibilidade
-Menu expansível no mobile com estado anunciado, fechamento ao navegar, clicar fora e Escape. Conteúdo e links de contato acessíveis sem JavaScript. Formulário com rótulos, validação e mensagens de estado. Animações curtas; respeito à redução de movimento. Foco visível, navegação por âncoras com compensação do cabeçalho fixo e quebra de colunas em telas pequenas.
+Pausa global e repetição por conversa. Animações ficam suspensas fora da tela ou com a aba oculta. `prefers-reduced-motion` mostra o conteúdo completo, estático. Sem JavaScript, os textos, conversas e contatos continuam disponíveis. A rolagem é nativa.
 
-## Contatos confirmados
-E-mail: contato@expedire.com.br. X: https://x.com/getexpedire.
-O formulário prepara um e-mail no aplicativo do visitante, com revisão antes do envio. Não há envio automático, backend ou armazenamento de dados no site. O download do briefing permanece disponível. WhatsApp comercial não foi fornecido e não é exibido como canal de contato.
+## Páginas e conteúdo
+Inicial, WhatsApp e oferta compartilham identidade. A oferta incorporada do commit 0659f1d conserva integralmente o texto comercial aprovado; somente marcação semântica, recursos e caminhos foram ajustados. Não foram criados clientes, métricas, depoimentos ou preços.
 
-## Imagens
-Arquivos e prompts em `assets/brand/` e `docs/BRAND-ASSETS.md`. Gerados pela ferramenta integrada de imagens; a interface não expõe seleção ou confirmação da versão do modelo. Não atribuir os arquivos a “GPT Images 2.5” sem confirmação da plataforma.
+## Contato
+Canais oficiais em contact-config.js: contato@expedire.com.br e https://x.com/getexpedire. Nenhum telefone comercial presumido. O formulário prepara uma mensagem no aplicativo do visitante; o download local do briefing é alternativo. Não há envio automático ou armazenamento remoto.
